@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-09-22",
+  "license": "Non dichiarata dalle fonti. Immagini ufficiali di produttori e importatori, usate per identificare il vino in un’anteprima privata. Uso pubblico da confermare con ciascun produttore, oppure sostituire con foto delle bottiglie della Cave.",
+  "assets": [
+    {
+      "wine": "balbiano-freisa-surpreisa",
+      "local_original": "src/bottiglie-originali/surpreisa.png",
+      "published_as": "assets/images/bottiglie/balbiano-freisa-surpreisa-<altezza>.avif|webp",
+      "publisher": "Cantine Balbiano",
+      "source_page": "https://www.balbiano.com/en/cellars/our-wines/freisa-chieri-doc-surpreisa",
+      "image_url": "https://www.balbiano.com/sites/default/files/styles/product_share/public/2024-06/balbiano-surpreisa-freisa-chieri-doc-2022.png",
+      "treatment": "Il nome del file indica l’annata 2022, la pagina presenta il 2025; ritaglio dei margini trasparenti. Risoluzione bassa (596 px): chiedere un originale."
+    },
+    {
+      "wine": "braida-montebruna",
+      "local_original": "src/bottiglie-originali/braida-cover.jpg",
+      "published_as": "assets/images/bottiglie/braida-montebruna-<altezza>.avif|webp",
+      "publisher": "Braida",
+      "source_page": "https://www.braida.it/area-download/",
+      "image_url": "https://www.braida.it/wp-content/uploads/2019/01/montebruna-copertina-vini-braida.jpg",
+      "treatment": "Fondo bianco reso trasparente (solo il bianco collegato ai bordi); bottiglia ed etichetta intatte."
+    },
+    {
+      "wine": "ceretto-blange",
+      "local_original": null,
+      "note": "Nessuna foto ufficiale scaricabile trovata sul sito del produttore il 2026-09-22 (pagina resa via JavaScript o senza packshot). Il sito mostra una sagoma disegnata con la scritta «foto in arrivo»."
+    },
+    {
+      "wine": "fevre-chablis-champs-royaux",
+      "local_original": "src/bottiglie-originali/fevre.png",
+      "published_as": "assets/images/bottiglie/fevre-chablis-champs-royaux-<altezza>.avif|webp",
+      "publisher": "Vintus (importatore statunitense)",
+      "source_page": "https://vintus.com/wines/william-fevre-chablis-champs-royaux/william-fevre-chablis-champs-royaux-2024/",
+      "image_url": "https://vintus.com/wp-content/uploads/2024/05/25100100NV-1.png",
+      "treatment": "Foto senza annata; ritaglio dei margini trasparenti."
+    },
+    {
+      "wine": "guigal-cotes-du-rhone-rouge",
+      "local_original": "src/bottiglie-originali/guigal.png",
+      "published_as": "assets/images/bottiglie/guigal-cotes-du-rhone-rouge-<altezza>.avif|webp",
+      "publisher": "Vintus (importatore statunitense)",
+      "source_page": "https://vintus.com/wines/cotes-du-rhone-rouge/",
+      "image_url": "https://vintus.com/wp-content/uploads/2018/08/00100100NV.png",
+      "treatment": "Foto senza annata; ritaglio dei margini trasparenti."
+    },
+    {
+      "wine": "lapierre-morgon",
+      "local_original": "src/bottiglie-originali/morgon.png",
+      "published_as": "assets/images/bottiglie/lapierre-morgon-<altezza>.avif|webp",
+      "publisher": "Domaine Marcel Lapierre",
+      "source_page": "https://www.marcel-lapierre.com/en/product/morgon/",
+      "image_url": "https://www.marcel-lapierre.com/wp-content/uploads/2020/06/Lapierre-Morgon.png",
+      "treatment": "Isolata la bottiglia di sinistra di una foto con tre formati; riflesso a terra escluso dal ritaglio."
+    },
+    {
+      "wine": "orsolani-la-rustia",
+      "local_original": null,
+      "note": "Nessuna foto ufficiale scaricabile trovata sul sito del produttore il 2026-09-22 (pagina resa via JavaScript o senza packshot). Il sito mostra una sagoma disegnata con la scritta «foto in arrivo»."
+    },
+    {
+      "wine": "produttori-carema-carema",
+      "local_original": "src/bottiglie-originali/carema.png",
+      "published_as": "assets/images/bottiglie/produttori-carema-carema-<altezza>.avif|webp",
+      "publisher": "Cantina dei Produttori Nebbiolo di Carema",
+      "source_page": "https://www.caremadoc.it/prodotto/carema-doc-2022/",
+      "image_url": "https://www.caremadoc.it/wp-content/uploads/2023/09/carema-doc.png",
+      "treatment": "Immagine di condivisione della pagina Carema DOC 2022; ritaglio dei margini trasparenti."
+    },
+    {
+      "wine": "produttori-del-barbaresco-barbaresco",
+      "local_original": "src/bottiglie-originali/barbaresco.png",
+      "published_as": "assets/images/bottiglie/produttori-del-barbaresco-barbaresco-<altezza>.avif|webp",
+      "publisher": "Produttori del Barbaresco",
+      "source_page": "https://www.produttoridelbarbaresco.com/vini/barbaresco-docg/",
+      "image_url": "https://www.produttoridelbarbaresco.com/wp-content/uploads/barbaresco-docg-2022-produttori-del-barbaresco.png",
+      "treatment": "Etichetta dell’annata 2022; ritaglio dei margini trasparenti."
+    },
+    {
+      "wine": "saracco-moscato-d-asti",
+      "local_original": "src/bottiglie-originali/moscato.jpg",
+      "published_as": "assets/images/bottiglie/saracco-moscato-d-asti-<altezza>.avif|webp",
+      "publisher": "Paolo Saracco",
+      "source_page": "https://paolosaracco.it/en/wines-saracco-piedmont/moscato-d-asti-docg-saracco",
+      "image_url": "https://paolosaracco.it/images/moscatobt.jpg",
+      "treatment": "Fondo bianco reso trasparente (solo il bianco collegato ai bordi); bottiglia ed etichetta intatte."
+    },
+    {
+      "wine": "vajra-barolo-albe",
+      "local_original": "src/bottiglie-originali/albe.png",
+      "published_as": "assets/images/bottiglie/vajra-barolo-albe-<altezza>.avif|webp",
+      "publisher": "G.D. Vajra",
+      "source_page": "https://www.gdvajra.it/en/barolo-albe-docg",
+      "image_url": "https://www.gdvajra.it/uploads/public/2237_bottle-nv-barolo-albe.png",
+      "treatment": "Foto senza annata («nv» nel nome del file); ritaglio dei margini trasparenti."
+    }
+  ]
+}

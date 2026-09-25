@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-09-22",
+  "license": "https://unsplash.com/license",
+  "assets": [
+    {
+      "local_path": "src/photos/bottiglie.jpg",
+      "published_as": "assets/images/foto/bottiglie-{640,960,1536}.{avif,webp}",
+      "photographer": "Emre Katmer",
+      "title": "a bunch of bottles of wine are stacked on a shelf",
+      "published": "2022-01-16",
+      "source": "https://unsplash.com/photos/a-bunch-of-bottles-of-wine-are-stacked-on-a-shelf-LaLp0Jzl4_0",
+      "download": "https://unsplash.com/photos/LaLp0Jzl4_0/download?force=true&w=2400",
+      "use": "Sfondo della volta nella pagina iniziale, dichiarato in pagina come foto d’atmosfera e non come la cantina della Cave. Nessuna etichetta leggibile."
+    }
+  ],
+  "considered_and_rejected": [
+    { "source": "https://unsplash.com/photos/a-bunch-of-wine-barrels-lined-up-in-a-cellar-nCqucqW7DAo", "reason": "Botti con il marchio di un domaine reale di Volnay: suggerirebbe un fornitore." },
+    { "source": "https://unsplash.com/photos/a-person-pouring-red-wine-into-a-wine-glass-3WzPZfzZNas", "reason": "Etichetta di un vino reale visibile." },
+    { "source": "https://unsplash.com/photos/a-close-up-of-a-wine-glass-on-a-table-ZWXeycnhPoA", "reason": "Marchio stampato sul calice." },
+    { "source": "https://unsplash.com/photos/t6RoUiXuhso", "reason": "Botti numerate con etichetta di una cantina reale." }
+  ],
+  "retouching": "Nessuno; solo ridimensionamento (scripts/images.py) e ritaglio via CSS."
+}

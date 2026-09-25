@@ -1,0 +1,394 @@
+/* Cantina dei vini, La Cave d'Antoine — foglio di stile unico.
+   Dal sito generale arrivano solo i token: colori, i due caratteri, la
+   scala 1.25, l'easing e l'arco come maschera. L'impaginazione è propria:
+   una barra al posto dell'insegna, la volta con la mensola, la carta per
+   scaffali, un colophon al posto del footer. Niente pulsanti con icona:
+   le azioni sono testo sottolineato. Provenienza: /research/DESIGN-SYSTEM-MAP.md
+   I font sono in fonts.css (generato, data URL per file://). */
+
+:root {
+  /* Marchio — stessi valori del sito generale */
+  --background: #f6f3ea;
+  --foreground: #302a25;
+  --primary: #6f272f;
+  --secondary: #e9e5d8;
+  --muted-foreground: #6e675f;
+  --border: #d8d0c2;
+  --marker: #e4c780;
+  --olive: #59604a;
+  /* Cantina — generate-color-scale.mjs --hue 17 --chroma 0.05 --mode dark:
+     la tinta del vino (#6f272f, OKLCH h≈17) a croma bassa. Passi 5/6/7/12. */
+  --cellar: #180b0c;
+  --cellar-2: #2a1a1b;
+  --cellar-3: #412d2d;
+  --cellar-text: #c9b1b1;
+  --glow: 228 199 128; /* = --marker, in canali RGB per la luce */
+  --plank: #d9ccb4;     /* bordo carta già usato dal marchio, qui come mensola */
+
+  --gutter: 32px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', Arial, sans-serif;
+  --motion-fast: 150ms; --motion-base: 250ms; --motion-slow: 400ms;
+}
+
+/* --- Preflight minimo --- */
+[hidden] { display: none !important; }
+*, ::before, ::after { box-sizing: border-box; border: 0 solid var(--border); }
+button, input { font: inherit; color: inherit; background: transparent; padding: 0; margin: 0; }
+button { -webkit-appearance: none; appearance: none; text-align: inherit; cursor: pointer; }
+svg { display: block; }
+ul, ol { list-style: none; padding: 0; margin: 0; }
+figure, p, h1, h2, h3, blockquote, dl, dd, fieldset { margin: 0; }
+
+/* --- Base --- */
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+img { display: block; max-width: 100%; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; }
+em { font-family: var(--font-display); font-weight: 500; }
+::selection { background: var(--marker); color: var(--foreground); }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.wrap { max-width: 1280px; width: calc(100% - var(--gutter) * 2); margin-inline: auto; }
+.quiet-note { font-size: 12px; color: var(--muted-foreground); }
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 100; transform: translateY(-160%); background: var(--background); border: 1px solid var(--primary); padding: 12px 16px; }
+.skip-link:focus { transform: none; }
+
+/* Link d'azione: testo sottolineato; al passaggio la riga dell'evidenziatore
+   del marchio sale sotto le lettere (lo stesso gesto del masthead del sito
+   generale). Nessuna icona. */
+.ink-link { display: inline-block; padding-block: 12px; font-size: 16px; line-height: 1.25; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 8px; text-decoration-skip-ink: none;
+  transition: text-decoration-color var(--motion-base) var(--ease); }
+/* Il gesto del marchio (la riga dell'evidenziatore sotto le lettere) è
+   una sottolineatura spessa: segue il testo e va a capo con le righe,
+   invece di riempire il riquadro di 44px del bersaglio. */
+.ink-link:hover, .ink-link:focus-visible { text-decoration-color: var(--marker); text-decoration-thickness: .42em; text-underline-offset: -.28em; }
+.nowrap { white-space: nowrap; }
+
+/* L'avviso segnaposto è stampato come una riga d'etichetta, non un riquadro */
+.print-note { font-size: 12px; line-height: 1.5; letter-spacing: .04em; color: var(--muted-foreground); padding-left: 20px; position: relative; }
+.print-note::before { content: ''; position: absolute; left: 0; top: .75em; width: 12px; height: 2px; background: var(--marker); }
+
+/* --- Barra --- */
+.bar { border-bottom: 1px solid var(--border); }
+.bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.brand-name { font-family: var(--font-display); font-size: 25px; font-weight: 600; color: var(--primary); line-height: 1; white-space: nowrap; }
+.brand-room { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); padding-left: 12px; border-left: 1px solid var(--border); }
+.bar nav { display: flex; gap: 24px; }
+.bar nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; padding-inline: 4px;
+  text-decoration: underline transparent; text-decoration-thickness: .42em; text-underline-offset: -.28em; text-decoration-skip-ink: none; transition: text-decoration-color var(--motion-base) var(--ease); }
+.bar nav a:hover, .bar nav a[aria-current] { text-decoration-color: var(--marker); }
+
+/* text-highlight: Fancy Components MIT; reveal-lines: animata "Mask Reveal Up" MIT (CREDITS.md) */
+.text-highlight { color: inherit; font-style: italic; font-family: var(--font-display); background: linear-gradient(transparent 60%, var(--primary) 60%, var(--primary) 88%, transparent 88%) left / 100% 100% no-repeat; box-decoration-break: clone; -webkit-box-decoration-break: clone; padding-inline: .03em; }
+.reveal-lines, .reveal-line, .reveal-line-inner { display: block; }
+.reveal-line { overflow: clip; padding-block: .1em; margin-block: -.1em; }
+
+/* ================================================================== */
+/* La volta                                                             */
+/* L'arco del sito generale (una maschera su un angolo) diventa la volta */
+/* di una cantina. Dentro, al buio, una mensola con le bottiglie vere;   */
+/* una lanterna le illumina dove passa il puntatore o il focus.         */
+/* ================================================================== */
+@property --light { syntax: '<number>'; inherits: true; initial-value: 1; }
+.vault-wrap { padding: 24px var(--gutter) 0; }
+.vault {
+  --lx: 60%; --ly: 70%; --lr: 360px; --light: 1; --mx: 0; --my: 0;
+  transition: --light 800ms var(--ease) 250ms;
+  position: relative; isolation: isolate; overflow: clip;
+  max-width: 1440px; margin-inline: auto;
+  min-height: clamp(720px, 92svh, 920px);
+  border-radius: 50% 50% 4px 4px / 240px 240px 4px 4px;
+  background: var(--cellar); color: var(--background);
+  display: grid; grid-template-rows: 1fr auto auto;
+  padding: 168px clamp(32px, 6vw, 96px) 0;
+}
+.vault.is-unlit { --light: 0; transition: none; }
+.vault-media { position: absolute; inset: -48px 0; z-index: -3; transform: translate3d(0, var(--depth-y, 0px), 0); }
+.vault-media picture, .vault-photo { width: 100%; height: 100%; }
+.vault-photo { object-fit: cover; object-position: 50% 40%; filter: brightness(.7) saturate(.85) sepia(.2);
+  transform: translate3d(calc(var(--mx) * -12px), calc(var(--my) * -8px), 0) scale(var(--image-scale, 1.04)); }
+.vault-dark { position: absolute; inset: 0; z-index: -2; background: var(--cellar); opacity: .92;
+  -webkit-mask-image: radial-gradient(circle calc(var(--lr) * 1.4 * var(--light)) at var(--lx) var(--ly), transparent 0%, transparent 20%, #0006 55%, #000 100%);
+  mask-image: radial-gradient(circle calc(var(--lr) * 1.4 * var(--light)) at var(--lx) var(--ly), transparent 0%, transparent 20%, #0006 55%, #000 100%); }
+.vault-glow { position: absolute; inset: 0; z-index: -1; mix-blend-mode: screen; opacity: var(--light); pointer-events: none;
+  background: radial-gradient(circle calc(var(--lr) * 1.1) at var(--lx) var(--ly), rgb(var(--glow) / .26), rgb(var(--glow) / .08) 45%, transparent 75%); }
+
+.vault-copy { align-self: start; max-width: 560px; }
+.vault h1 { font-size: clamp(61px, 7.4vw, 95px); line-height: .98; letter-spacing: -.03em; }
+.vault-lead { font-family: var(--font-display); font-size: 25px; line-height: 1.3; color: var(--background); margin-top: 24px; max-width: 460px; }
+.print-note-dark { color: var(--cellar-text); margin-top: 20px; }
+.vault-links { display: flex; flex-wrap: wrap; gap: 4px 32px; margin-top: 24px; }
+.vault .ink-link:hover, .vault .ink-link:focus-visible { text-decoration-color: var(--primary); }
+.vault :focus-visible { outline-color: var(--marker); }
+
+.vault-shelf { position: relative; margin-top: 48px; }
+.vault-shelf ul { display: flex; align-items: flex-end; justify-content: center; gap: clamp(8px, 2.2vw, 32px); position: relative; padding-inline: 16px; }
+.vault-shelf ul::after { content: ''; position: absolute; left: -16px; right: -16px; bottom: -12px; height: 12px; background: linear-gradient(var(--cellar-3), var(--cellar-2)); border-top: 1px solid rgb(var(--glow) / .3); }
+.shelf-bottle { --lit: 1; display: block; transition: transform var(--motion-base) var(--ease); }
+.shelf-bottle img { height: min(300px, 25vw); width: auto; filter: brightness(calc(.2 + .8 * var(--lit) * var(--light))); transition: filter var(--motion-fast) var(--ease); }
+.shelf-bottle:hover, .shelf-bottle:focus-visible { --lit: 1 !important; transform: translateY(-8px); }
+.shelf-bottle:focus-visible { outline-offset: 8px; }
+.vault-foot { display: flex; justify-content: space-between; gap: 24px; padding: 28px 0 20px; font-size: 12px; line-height: 1.5; color: var(--cellar-text); }
+.vault-hint { font-style: italic; font-family: var(--font-display); font-size: 16px; }
+.vault-credit { max-width: 520px; text-align: right; }
+
+/* ================================================================== */
+/* La carta                                                             */
+/* ================================================================== */
+.carta { padding-block: 96px 32px; }
+.carta-head { display: grid; grid-template-columns: 3fr 9fr; gap: 24px 32px; align-items: end; padding-bottom: 48px; }
+.carta-head h2 { font-size: 76px; line-height: .95; }
+.carta-intro { max-width: 600px; }
+.carta-intro > p:first-child { font-size: 20px; line-height: 1.5; }
+.carta-intro .print-note { margin-top: 16px; }
+.type-filter { grid-column: 2; display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; padding-top: 16px; border-top: 1px solid var(--border); }
+.type-filter fieldset { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; border: 0; padding: 0; min-width: 0; }
+.type-filter legend { float: left; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); padding: 0; margin-right: 8px; }
+.type-option { position: relative; display: inline-flex; }
+.type-option input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.type-option span { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding-inline: 4px; font-size: 16px;
+  text-decoration: underline transparent; text-decoration-thickness: .42em; text-underline-offset: -.28em; text-decoration-skip-ink: none; transition: text-decoration-color var(--motion-base) var(--ease); }
+.type-option small { display: inline-block; font-size: 12px; color: var(--muted-foreground); }
+.type-option:hover span, .type-option input:checked + span { text-decoration-color: var(--marker); }
+.type-option input:focus-visible + span { outline: 2px solid var(--primary); outline-offset: 2px; }
+.filter-status { margin-left: auto; font-family: var(--font-display); font-style: italic; font-size: 20px; }
+
+.shelf { display: grid; grid-template-columns: 3fr 9fr; gap: 32px; padding-block: 48px 64px; border-top: 1px solid var(--border); }
+.shelf-head { position: sticky; top: 24px; align-self: start; }
+.shelf-no { font-family: var(--font-display); font-style: italic; font-size: 25px; color: var(--primary); line-height: 1; }
+.shelf-head h3 { font-size: 39px; margin-top: 8px; }
+.shelf-meta { font-size: 14px; color: var(--muted-foreground); margin-top: 12px; max-width: 260px; }
+.shelf-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 56px 24px; }
+.bottle-link { display: block; }
+.bottle-stand { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 284px; margin-bottom: 24px; }
+.bottle-stand::after { content: ''; position: absolute; left: -12px; right: -12px; bottom: -8px; height: 8px; background: var(--secondary); border-top: 1px solid var(--plank); }
+.bottle-stand img { height: 260px; width: auto; transition: transform var(--motion-base) var(--ease); }
+.bottle-link:hover .bottle-stand img, .bottle-link:focus-visible .bottle-stand img { transform: translateY(-8px); }
+.bottle-producer { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); line-height: 1.4; margin-top: 8px; }
+.bottle-name { display: inline; font-family: var(--font-display); font-size: 25px; font-weight: 600; line-height: 1.15;
+  background: linear-gradient(var(--marker), var(--marker)) left 85% / 0% 40% no-repeat; transition: background-size var(--motion-slow) var(--ease); }
+.bottle-link:hover .bottle-name, .bottle-link:focus-visible .bottle-name { background-size: 100% 40%; }
+.bottle-denom { display: block; font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--muted-foreground); margin-top: 4px; }
+.bottle-note { font-size: 12px; line-height: 1.5; color: var(--muted-foreground); margin-top: 8px; }
+.bottle-missing { position: relative; display: grid; place-items: center; height: 240px; }
+.bottle-missing svg { height: 240px; width: auto; fill: none; stroke: var(--plank); stroke-width: 1.5; }
+.bottle-missing span { position: absolute; top: 58%; font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--muted-foreground); }
+.carta-empty { padding-block: 32px 64px; border-top: 1px solid var(--border); }
+.carta-empty p { font-family: var(--font-display); font-style: italic; font-size: 25px; }
+
+/* ================================================================== */
+/* Scheda vino                                                          */
+/* ================================================================== */
+.breadcrumb { padding-top: 16px; font-size: 12px; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 0 8px; }
+.breadcrumb li + li::before { content: '/'; margin-right: 8px; color: var(--muted-foreground); }
+.breadcrumb a, .breadcrumb span { display: inline-flex; align-items: center; min-height: 44px; }
+.breadcrumb a { text-decoration: underline; text-underline-offset: 4px; }
+.wine { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 80px; align-items: start; padding-block: 8px 96px; }
+.wine-head { grid-column: 2; grid-row: 1; }
+.wine-figure { grid-column: 1; grid-row: 1 / span 2; position: sticky; top: 24px; }
+.wine-body { grid-column: 2; grid-row: 2; }
+.wine-vault { position: relative; isolation: isolate; overflow: clip; background: var(--cellar); border-radius: 50% 50% 4px 4px / 180px 180px 4px 4px; min-height: 640px; display: flex; align-items: flex-end; justify-content: center; padding: 96px 32px 24px; }
+.wine-vault::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 24px; background: linear-gradient(var(--cellar-3), var(--cellar-2)); border-top: 1px solid rgb(var(--glow) / .3); z-index: -1; }
+.wine-vault-glow { position: absolute; inset: 0; z-index: -2; background: radial-gradient(circle 280px at 50% 62%, rgb(var(--glow) / .24), rgb(var(--glow) / .06) 55%, transparent 78%); }
+.wine-bottle img { height: 520px; width: auto; max-height: 72vh; }
+.wine-bottle .bottle-missing svg { stroke: var(--cellar-3); height: 440px; }
+.wine-bottle .bottle-missing { height: 480px; }
+.wine-bottle .bottle-missing span { color: var(--cellar-text); }
+.wine-figure figcaption { font-size: 12px; line-height: 1.5; color: var(--muted-foreground); margin-top: 12px; max-width: 460px; }
+.wine-producer { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); margin-top: 24px; }
+.wine-head h1 { font-size: clamp(49px, 5.6vw, 76px); margin-top: 12px; }
+.wine-denom { font-family: var(--font-display); font-style: italic; font-size: 25px; color: var(--muted-foreground); margin-top: 8px; }
+.wine-head > .print-note { margin-top: 24px; max-width: 520px; }
+.wine-body section { margin-top: 56px; }
+.wine-body section h2 { font-family: var(--font-body); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; line-height: 1.2; padding-bottom: 12px; border-bottom: 1px solid var(--foreground); }
+.fact-list > div { display: grid; grid-template-columns: 168px 1fr; gap: 24px; padding: 12px 0; border-bottom: 1px dotted var(--plank); font-size: 14px; line-height: 1.6; }
+.fact-list dt { color: var(--muted-foreground); }
+.fact-list a { text-decoration: underline; text-underline-offset: 4px; }
+.fact-list .ref { text-decoration: none; color: var(--primary); font-size: 12px; white-space: nowrap; }
+.cellar-note > p { font-family: var(--font-display); font-style: italic; font-size: 25px; line-height: 1.35; color: var(--muted-foreground); max-width: 560px; margin-top: 16px; }
+.cellar-note blockquote p { font-family: var(--font-display); font-size: 25px; line-height: 1.35; margin-top: 16px; }
+.wine-commerce > p:not(.quiet-note) { margin-top: 16px; max-width: 560px; }
+.wine-commerce > p .ink-link + .ink-link { margin-left: 24px; }
+.wine-commerce .quiet-note { margin-top: 4px; }
+.sources ol { list-style: decimal; padding-left: 20px; margin-top: 16px; }
+.sources li { font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+.sources li span { color: var(--muted-foreground); }
+.sources a { text-decoration: underline; text-underline-offset: 4px; }
+.sources > p { font-size: 14px; margin-top: 16px; }
+.wine-pager { display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: start; padding-block: 32px 96px; border-top: 1px solid var(--border); }
+.wine-pager a { display: block; min-height: 44px; font-family: var(--font-display); font-size: 25px; line-height: 1.15; }
+.wine-pager small { display: block; font-family: var(--font-body); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-foreground); margin-bottom: 4px; }
+.wine-pager a:hover, .wine-pager a:focus-visible { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 1px; }
+.wine-pager .pager-all { font-family: var(--font-body); font-size: 14px; text-decoration: underline; text-underline-offset: 4px; display: inline-flex; align-items: center; }
+.wine-pager .pager-next { text-align: right; }
+
+/* --- Colophon --- */
+.colophon { border-top: 1px solid var(--foreground); margin-top: 32px; }
+.colophon-grid { display: grid; grid-template-columns: 4fr 5fr 3fr; gap: 32px; padding-block: 48px; }
+.colophon-brand { font-family: var(--font-display); font-size: 31px; font-weight: 600; color: var(--primary); line-height: 1.1; margin-bottom: 12px; }
+.colophon-grid > div > p:last-child { font-size: 14px; }
+.colophon-grid a { text-decoration: underline; text-underline-offset: 4px; }
+.colophon-text { font-family: var(--font-display); font-style: italic; font-size: 25px; line-height: 1.35; max-width: 460px; }
+.colophon nav { display: flex; flex-direction: column; align-items: flex-start; font-size: 14px; }
+.colophon nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.colophon-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 16px 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted-foreground); }
+.colophon-base a { text-decoration: underline; text-underline-offset: 4px; }
+.colophon-grid > div a, .colophon-base a { display: inline-flex; align-items: center; min-height: 44px; }
+.colophon-base { align-items: center; }
+
+/* --- Note legali (il riquadro d'avviso qui è richiesto dalla baseline) --- */
+.legal-page { max-width: 800px; padding-block: 64px 80px; }
+.legal-page h1 { font-size: clamp(49px, 5.3vw, 76px); margin-bottom: 32px; }
+.legal-page > .quiet-note:first-child { letter-spacing: .08em; text-transform: uppercase; margin-bottom: 24px; }
+.legal-notice { border-left: 4px solid var(--primary); background: var(--secondary); padding: 20px 24px; }
+.legal-notice strong { font-weight: 500; }
+.legal-notice p { margin-top: 8px; font-size: 14px; }
+.legal-index { display: flex; flex-wrap: wrap; gap: 0 24px; padding-block: 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.legal-index a { display: inline-flex; align-items: center; min-height: 44px; }
+.legal-page a { text-decoration: underline; text-underline-offset: 4px; }
+.legal-page section { margin-top: 48px; }
+.legal-page section h2 { font-size: 31px; margin-bottom: 20px; }
+.legal-page h3 { font-size: 25px; margin-top: 32px; }
+.legal-page section p { margin-top: 16px; }
+.legal-page code { font-size: .9em; background: var(--secondary); padding: 0 4px; }
+.legal-list { list-style: decimal; padding-left: 20px; }
+ul.legal-list { list-style: disc; }
+.legal-list li { margin-top: 12px; }
+.legal-list strong { font-weight: 500; }
+.legal-updated { margin-top: 48px; }
+
+/* --- 404 --- */
+.not-found { padding-block: 96px; }
+.not-found > .quiet-note:first-child { letter-spacing: .08em; text-transform: uppercase; margin-bottom: 24px; }
+.not-found h1 { font-size: clamp(49px, 5.3vw, 76px); margin-bottom: 24px; }
+.not-found > p:not(:last-child) { font-size: 20px; max-width: 480px; }
+.not-found > p:last-child { margin-top: 24px; }
+
+/* ================================================================== */
+/* Responsive                                                           */
+/* ================================================================== */
+@media (max-width: 1023px) {
+  :root { --gutter: 24px; }
+  .vault { border-radius: 50% 50% 4px 4px / 180px 180px 4px 4px; padding-top: 136px; min-height: 0; }
+  .vault-foot { flex-direction: column; }
+  .vault-credit { text-align: left; }
+  .carta-head, .shelf { grid-template-columns: 1fr; }
+  .type-filter { grid-column: 1; }
+  .shelf-head { position: static; }
+  .shelf-bottle img { height: min(300px, 28vw); }
+  .wine { column-gap: 40px; }
+  .wine-vault { min-height: 520px; padding-inline: 16px; }
+  .wine-bottle img { height: 400px; }
+  .colophon-grid { grid-template-columns: 1fr 1fr; }
+  .colophon-text { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  :root { --gutter: 16px; }
+  .bar-inner { min-height: 64px; gap: 12px; }
+  .brand-name { font-size: 20px; }
+  .brand-room { display: none; }
+  .bar nav { gap: 8px; }
+
+  /* Volta: più corta, tutte e nove le bottiglie spalla a spalla */
+  .vault-wrap { padding: 12px 8px 0; }
+  .vault { --lr: 200px; border-radius: 50% 50% 4px 4px / 96px 96px 4px 4px; padding: 80px 16px 0; }
+  .vault-media { inset: 0; }
+  .vault-copy { padding-inline: 4px; }
+  .vault h1 { font-size: 61px; }
+  .vault-lead { font-size: 20px; margin-top: 16px; }
+  .vault-links { flex-direction: column; align-items: flex-start; gap: 0; margin-top: 16px; }
+  .vault-shelf { margin-top: 32px; }
+  .vault-shelf ul { gap: 0; padding-inline: 0; justify-content: space-between; }
+  .vault-shelf ul::after { left: -8px; right: -8px; }
+  .shelf-bottle img { height: 36vw; }
+  .shelf-bottle:hover, .shelf-bottle:focus-visible { transform: translateY(-4px); }
+  .vault-hint { display: none; }
+  .vault-foot { padding: 24px 4px 16px; }
+
+  /* Carta: su telefono diventa una lista, come una carta dei vini stampata */
+  .carta { padding-top: 56px; }
+  .carta-head { padding-bottom: 24px; gap: 16px; }
+  .carta-head h2 { font-size: 61px; }
+  .carta-intro > p:first-child { font-size: 16px; }
+  .type-filter { gap: 0 16px; padding-top: 8px; }
+  .type-filter legend { float: none; width: 100%; margin: 8px 0 0; }
+  .type-filter fieldset { gap: 0 12px; }
+  .filter-status { margin-left: 0; width: 100%; font-size: 16px; }
+  .shelf { gap: 8px; padding-block: 32px 16px; }
+  .shelf-head { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: baseline; }
+  .shelf-no { font-size: 20px; }
+  .shelf-head h3 { font-size: 31px; margin-top: 0; }
+  .shelf-meta { grid-column: 1 / -1; margin-top: 4px; max-width: none; }
+  .shelf-row { grid-template-columns: 1fr; gap: 0; }
+  .bottle-item { position: relative; min-height: 160px; padding: 16px 0 16px 88px; border-bottom: 1px solid var(--border); }
+  .bottle-item:first-child { margin-top: 8px; border-top: 1px solid var(--border); }
+  .bottle-link { display: block; }
+  .bottle-stand { position: absolute; left: 0; top: 16px; width: 72px; height: 128px; margin: 0; }
+  .bottle-stand::after { left: 4px; right: 4px; bottom: -8px; }
+  .bottle-stand img { height: 120px; }
+  .bottle-link:hover .bottle-stand img, .bottle-link:focus-visible .bottle-stand img { transform: translateY(-4px); }
+  .bottle-name { font-size: 25px; }
+  .bottle-producer { margin-top: 4px; }
+  .bottle-note { margin-top: 8px; }
+  .bottle-missing { height: 128px; align-content: end; }
+  .bottle-missing svg { height: 104px; }
+  .bottle-missing span { position: static; font-size: 12px; line-height: 1.2; text-align: center; }
+  .carta-empty { padding-top: 24px; }
+
+  /* Scheda: nome prima, poi una bottiglia più contenuta */
+  .breadcrumb { padding-top: 8px; }
+  .wine { grid-template-columns: 1fr; padding-block: 0 48px; row-gap: 24px; }
+  .wine-head, .wine-figure, .wine-body { grid-column: 1; grid-row: auto; }
+  .wine-figure { position: static; }
+  .wine-body section:first-child { margin-top: 24px; }
+  .wine-producer { margin-top: 8px; }
+  .wine-denom { font-size: 20px; }
+  .wine-head > .print-note { margin-top: 16px; }
+  .wine-vault { min-height: 0; height: 384px; border-radius: 50% 50% 4px 4px / 112px 112px 4px 4px; padding: 64px 24px 20px; }
+  .wine-bottle img { height: 300px; max-height: none; }
+  .wine-bottle .bottle-missing { height: 300px; }
+  .wine-bottle .bottle-missing svg { height: 272px; }
+  .wine-body section { margin-top: 40px; }
+  .fact-list > div { grid-template-columns: 1fr; gap: 0; }
+  .wine-pager { grid-template-columns: 1fr 1fr; gap: 16px; padding-block: 24px 48px; }
+  .wine-pager .pager-all { grid-column: 1 / -1; grid-row: 2; justify-self: start; }
+  .wine-pager a { font-size: 20px; }
+
+  /* Colophon: prima chi siamo, poi la frase, poi i link in riga */
+  .colophon-grid { grid-template-columns: 1fr; gap: 24px; padding-block: 40px 24px; }
+  .colophon-grid > div { order: -1; }
+  .colophon-text { font-size: 20px; }
+  .colophon nav { flex-direction: row; flex-wrap: wrap; column-gap: 24px; }
+  .colophon-base { flex-direction: column; align-items: flex-start; gap: 0; }
+  .legal-page { padding-block: 40px 48px; }
+  .legal-notice { padding: 16px; }
+  .not-found { padding-block: 56px; }
+}
+@media (max-width: 380px) {
+  .vault h1 { font-size: 49px; }
+  .bar nav a:last-child { display: none; }
+  .carta-head h2 { font-size: 49px; }
+  .bottle-name { font-size: 20px; }
+}
+@media (max-width: 767px) {
+  [data-depth] { --depth-y: 0px; --image-scale: 1; }
+}
+
+/* ================================================================== */
+/* Movimento ridotto: luce piena e ferma, niente riordino, niente reveal */
+/* ================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  [data-depth] { --depth-y: 0px !important; --image-scale: 1 !important; }
+  .vault { --mx: 0 !important; --my: 0 !important; --light: 1 !important; }
+  .shelf-bottle { --lit: 1 !important; }
+  .shelf-bottle:hover, .shelf-bottle:focus-visible, .bottle-link:hover .bottle-stand img, .bottle-link:focus-visible .bottle-stand img { transform: none; }
+  .reveal-line-inner { animation: none !important; }
+  .text-highlight { background-size: 100% 100% !important; }
+}
