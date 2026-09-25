@@ -1,0 +1,70 @@
+{
+  "id": "braida-montebruna",
+  "order": 3,
+  "published": true,
+  "name": "Montebruna",
+  "producer": {
+    "name": "Braida di Giacomo Bologna",
+    "place": "Rocchetta Tanaro (AT)",
+    "url": "https://www.braida.it/"
+  },
+  "denomination": "Barbera d’Asti DOCG",
+  "type": "rosso",
+  "area": "langhe-roero-asti",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Astigiano · Rocchetta Tanaro"
+  },
+  "grapes": [
+    {
+      "name": "Barbera",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": null,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vigneto",
+      "value": "Uve di proprietà a Rocchetta Tanaro; secondo la cantina, riunire gli appezzamenti ha richiesto 35 atti notarili e 7 anni",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Fermentazione di due settimane in vasche d’acciaio a temperatura controllata",
+      "source": "s1"
+    },
+    {
+      "label": "Affinamento",
+      "value": "Un anno in grandi botti di rovere",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Pagina del vino, con scheda tecnica ed etichetta scaricabili",
+      "publisher": "Braida",
+      "url": "https://www.braida.it/montebruna/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.braida.it/montebruna/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Braida",
+    "kind": "produttore",
+    "page": "https://www.braida.it/area-download/",
+    "imageUrl": "https://www.braida.it/wp-content/uploads/2019/01/montebruna-copertina-vini-braida.jpg",
+    "status": "uso da confermare"
+  }
+}

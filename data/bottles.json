@@ -1,0 +1,135 @@
+{
+  "produttori-del-barbaresco-barbaresco": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 104
+      },
+      {
+        "height": 800,
+        "width": 208
+      },
+      {
+        "height": 1200,
+        "width": 312
+      }
+    ],
+    "ratio": 0.2602
+  },
+  "vajra-barolo-albe": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 103
+      },
+      {
+        "height": 800,
+        "width": 207
+      }
+    ],
+    "ratio": 0.2581
+  },
+  "braida-montebruna": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 106
+      },
+      {
+        "height": 800,
+        "width": 212
+      },
+      {
+        "height": 1200,
+        "width": 319
+      }
+    ],
+    "ratio": 0.2655
+  },
+  "saracco-moscato-d-asti": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 104
+      },
+      {
+        "height": 800,
+        "width": 208
+      }
+    ],
+    "ratio": 0.2598
+  },
+  "produttori-carema-carema": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 102
+      },
+      {
+        "height": 800,
+        "width": 204
+      }
+    ],
+    "ratio": 0.2556
+  },
+  "balbiano-freisa-surpreisa": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 97
+      }
+    ],
+    "ratio": 0.2433
+  },
+  "guigal-cotes-du-rhone-rouge": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 107
+      },
+      {
+        "height": 800,
+        "width": 214
+      },
+      {
+        "height": 1200,
+        "width": 321
+      }
+    ],
+    "ratio": 0.2671
+  },
+  "lapierre-morgon": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 114
+      },
+      {
+        "height": 800,
+        "width": 227
+      },
+      {
+        "height": 1200,
+        "width": 341
+      }
+    ],
+    "ratio": 0.2838
+  },
+  "fevre-chablis-champs-royaux": {
+    "variants": [
+      {
+        "height": 400,
+        "width": 109
+      },
+      {
+        "height": 800,
+        "width": 219
+      },
+      {
+        "height": 1200,
+        "width": 328
+      }
+    ],
+    "ratio": 0.2737
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "vajra-barolo-albe",
+  "order": 2,
+  "published": true,
+  "name": "Barolo Albe",
+  "producer": {
+    "name": "G.D. Vajra",
+    "place": "Vergne, Barolo (CN)",
+    "url": "https://www.gdvajra.it/"
+  },
+  "denomination": "Barolo DOCG",
+  "type": "rosso",
+  "area": "langhe-roero-asti",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Langhe · Barolo"
+  },
+  "grapes": [
+    {
+      "name": "Nebbiolo",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": 2022,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vigneti",
+      "value": "Assemblaggio di vigneti del Barolo DOCG in quota, tra 380 e 480 m s.l.m., esposti da sud-sud-est a sud-ovest",
+      "source": "s1"
+    },
+    {
+      "label": "Coltivazione",
+      "value": "Vigneti a certificazione biologica",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "In tini verticali; macerazione media di 36 giorni nel 2022, malolattica spontanea in acciaio",
+      "source": "s1"
+    },
+    {
+      "label": "Affinamento",
+      "value": "22 mesi in botti grandi di rovere di Slavonia da 40, 50 e 75 hl (annata 2022)",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Fact sheet del produttore, annata 2022 (PDF, in inglese)",
+      "publisher": "G.D. Vajra",
+      "url": "https://www.gdvajra.it/uploads/public/3616_fact-sheet-2022-barolo-albe-fs-eng.pdf",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Pagina del vino",
+      "publisher": "G.D. Vajra",
+      "url": "https://www.gdvajra.it/en/barolo-albe-docg",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.gdvajra.it/en/barolo-albe-docg",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "G.D. Vajra",
+    "kind": "produttore",
+    "page": "https://www.gdvajra.it/en/barolo-albe-docg",
+    "imageUrl": "https://www.gdvajra.it/uploads/public/2237_bottle-nv-barolo-albe.png",
+    "status": "uso da confermare"
+  }
+}

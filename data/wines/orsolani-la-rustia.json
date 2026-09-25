@@ -1,0 +1,81 @@
+{
+  "id": "orsolani-la-rustia",
+  "order": 7,
+  "published": true,
+  "name": "La Rustìa",
+  "producer": {
+    "name": "Orsolani",
+    "place": "San Giorgio Canavese (TO)",
+    "url": "https://www.orsolani.com/"
+  },
+  "denomination": "Erbaluce di Caluso DOCG",
+  "type": "bianco",
+  "area": "torino-canavese",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Canavese · colline moreniche, città metropolitana di Torino"
+  },
+  "grapes": [
+    {
+      "name": "Erbaluce",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": null,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vigneti",
+      "value": "Esposti a sud, 15 ettari a 300 m s.l.m.",
+      "source": "s2"
+    },
+    {
+      "label": "Terreno",
+      "value": "Sciolto, ricco di minerali, di origine morenica",
+      "source": "s2"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Fermentazione in acciaio",
+      "source": "s2"
+    },
+    {
+      "label": "Alcol",
+      "value": "13% vol.",
+      "source": "s2"
+    },
+    {
+      "label": "Il nome",
+      "value": "«La Rustìa», in piemontese «la tostata», richiama le bucce punteggiate dal sole",
+      "source": "s2"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Sito della cantina (elenco vini e indirizzo)",
+      "publisher": "Orsolani",
+      "url": "https://www.orsolani.com/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Scheda dell’importatore statunitense (PDF, in inglese)",
+      "publisher": "Matchvino",
+      "url": "https://static1.squarespace.com/static/681df546e657c13602d27ea8/t/6936ad86f82d611c8b18d06c/1765191046565/Orsolani+La+Rustia+Spec+Sheet.pdf",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.orsolani.com/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": null
+}

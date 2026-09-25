@@ -1,0 +1,95 @@
+{
+  "id": "guigal-cotes-du-rhone-rouge",
+  "order": 9,
+  "published": true,
+  "name": "Côtes du Rhône Rouge",
+  "producer": {
+    "name": "E. Guigal",
+    "place": null,
+    "url": "https://www.guigal.com/"
+  },
+  "denomination": "Côtes du Rhône AOC",
+  "type": "rosso",
+  "area": "francia",
+  "origin": {
+    "country": "Francia",
+    "region": "Valle del Rodano",
+    "zone": "Côtes du Rhône"
+  },
+  "grapes": [
+    {
+      "name": "Syrah",
+      "percent": 50
+    },
+    {
+      "name": "Grenache",
+      "percent": 40
+    },
+    {
+      "name": "Mourvèdre",
+      "percent": 10
+    }
+  ],
+  "vintage": {
+    "reference": 2020,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Uvaggio",
+      "value": "Proporzioni della scheda dell’annata 2020: cambiano da un’annata all’altra",
+      "source": "s1"
+    },
+    {
+      "label": "Terreni",
+      "value": "Sedimentari, calcarei e granitici, con ciottoli e depositi alluvionali",
+      "source": "s1"
+    },
+    {
+      "label": "Vigne",
+      "value": "Età media 35 anni",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Macerazione lunga in acciaio, follature due volte al giorno",
+      "source": "s1"
+    },
+    {
+      "label": "Affinamento",
+      "value": "24–30 mesi in legno neutro",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda tecnica dell’importatore statunitense, annata 2020 (PDF, in inglese)",
+      "publisher": "Vintus",
+      "url": "https://vintus.com/wp-content/uploads/2024/01/Guigal-CDR-Rouge-20-Tech.pdf",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Sito del produttore",
+      "publisher": "E. Guigal",
+      "url": "https://www.guigal.com/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.guigal.com/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Vintus (importatore statunitense)",
+    "kind": "importatore",
+    "page": "https://vintus.com/wines/cotes-du-rhone-rouge/",
+    "imageUrl": "https://vintus.com/wp-content/uploads/2018/08/00100100NV.png",
+    "status": "uso da confermare"
+  }
+}

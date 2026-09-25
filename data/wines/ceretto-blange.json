@@ -1,0 +1,71 @@
+{
+  "id": "ceretto-blange",
+  "order": 4,
+  "published": true,
+  "name": "Blangé",
+  "producer": {
+    "name": "Ceretto",
+    "place": null,
+    "url": "https://www.ceretto.com/"
+  },
+  "denomination": "Langhe DOC Arneis",
+  "type": "bianco",
+  "area": "langhe-roero-asti",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Roero e Langhe · Vezza d’Alba, Castellinaldo, Alba"
+  },
+  "grapes": [
+    {
+      "name": "Arneis",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": null,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Comuni",
+      "value": "Vezza d’Alba, Castellinaldo, Alba",
+      "source": "s1"
+    },
+    {
+      "label": "Superficie",
+      "value": "80 ettari, secondo la scheda del produttore",
+      "source": "s1"
+    },
+    {
+      "label": "Territorio",
+      "value": "La scheda lo presenta come figlio del Roero",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda del produttore (PDF, in italiano)",
+      "publisher": "Ceretto",
+      "url": "https://ceretto.com/uploads/public/2030_it-ceretto-langhe-doc-arneis-blange.pdf",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Pagina del vino",
+      "publisher": "Ceretto",
+      "url": "https://www.ceretto.com/en/wines/langhe-doc-arneis-blange",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.ceretto.com/en/wines/langhe-doc-arneis-blange",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": null
+}

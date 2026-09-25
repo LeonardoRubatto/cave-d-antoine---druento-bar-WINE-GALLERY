@@ -1,0 +1,87 @@
+{
+  "id": "lapierre-morgon",
+  "order": 10,
+  "published": true,
+  "name": "Morgon",
+  "producer": {
+    "name": "Domaine Marcel Lapierre",
+    "place": "Villié-Morgon, Beaujolais",
+    "url": "https://www.marcel-lapierre.com/"
+  },
+  "denomination": "Morgon AOC · cru del Beaujolais",
+  "type": "rosso",
+  "area": "francia",
+  "origin": {
+    "country": "Francia",
+    "region": "Beaujolais",
+    "zone": "Morgon"
+  },
+  "grapes": [
+    {
+      "name": "Gamay",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": null,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Coltivazione",
+      "value": "Biologica",
+      "source": "s1"
+    },
+    {
+      "label": "Terreno",
+      "value": "Granitico; vigne di 70 anni d’età media",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Fermentazione semi-carbonica, senza lieviti né solfiti aggiunti",
+      "source": "s1"
+    },
+    {
+      "label": "Affinamento",
+      "value": "Circa 9 mesi in fusti da 216 litri",
+      "source": "s1"
+    },
+    {
+      "label": "Imbottigliamento",
+      "value": "Due versioni: non filtrato con poca solforosa, oppure senza solfiti aggiunti",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda tecnica dell’importatore statunitense (PDF, in inglese)",
+      "publisher": "Corso Wines",
+      "url": "https://www.corsowines.com/files/portfolio/Lapierre%20Morgon%20Tech%20Sheet%20.pdf",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Pagina del vino",
+      "publisher": "Domaine Marcel Lapierre",
+      "url": "https://www.marcel-lapierre.com/en/product/morgon/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.marcel-lapierre.com/en/product/morgon/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Domaine Marcel Lapierre",
+    "kind": "produttore",
+    "page": "https://www.marcel-lapierre.com/en/product/morgon/",
+    "imageUrl": "https://www.marcel-lapierre.com/wp-content/uploads/2020/06/Lapierre-Morgon.png",
+    "status": "uso da confermare"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "fevre-chablis-champs-royaux",
+  "order": 11,
+  "published": true,
+  "name": "Chablis Champs Royaux",
+  "producer": {
+    "name": "William Fèvre",
+    "place": "Chablis, Borgogna",
+    "url": "https://www.williamfevre.fr/"
+  },
+  "denomination": "Chablis AOC",
+  "type": "bianco",
+  "area": "francia",
+  "origin": {
+    "country": "Francia",
+    "region": "Borgogna",
+    "zone": "Chablis · valle del Serein"
+  },
+  "grapes": [
+    {
+      "name": "Chardonnay",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": 2024,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vigneti",
+      "value": "Selezione di vigne su entrambe le rive del Serein",
+      "source": "s1"
+    },
+    {
+      "label": "Terreno",
+      "value": "Suoli kimmeridgiani, ricchi di fossili di ostriche",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Fermentazione spontanea in acciaio con malolattica; il 5% fermenta in vecchie barrique di rovere francese",
+      "source": "s1"
+    },
+    {
+      "label": "Alcol",
+      "value": "12,5% (annata 2024)",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda dell’importatore statunitense, annata 2024 (in inglese)",
+      "publisher": "Vintus",
+      "url": "https://vintus.com/wines/william-fevre-chablis-champs-royaux/william-fevre-chablis-champs-royaux-2024/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://vintus.com/wines/william-fevre-chablis-champs-royaux/william-fevre-chablis-champs-royaux-2024/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Vintus (importatore statunitense)",
+    "kind": "importatore",
+    "page": "https://vintus.com/wines/william-fevre-chablis-champs-royaux/william-fevre-chablis-champs-royaux-2024/",
+    "imageUrl": "https://vintus.com/wp-content/uploads/2024/05/25100100NV-1.png",
+    "status": "uso da confermare"
+  }
+}

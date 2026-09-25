@@ -1,0 +1,87 @@
+{
+  "id": "produttori-carema-carema",
+  "order": 6,
+  "published": true,
+  "name": "Carema",
+  "producer": {
+    "name": "Cantina dei Produttori Nebbiolo di Carema",
+    "place": "Carema (TO)",
+    "url": "https://www.caremadoc.it/"
+  },
+  "denomination": "Carema DOC",
+  "type": "rosso",
+  "area": "torino-canavese",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Canavese · Carema, città metropolitana di Torino"
+  },
+  "grapes": [
+    {
+      "name": "Nebbiolo",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": 2022,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vinificazione",
+      "value": "Fermentazione in acciaio, macerazione di circa 12 giorni",
+      "source": "s1"
+    },
+    {
+      "label": "Affinamento",
+      "value": "Due anni, di cui almeno 12 mesi in botti grandi di rovere",
+      "source": "s1"
+    },
+    {
+      "label": "Alcol",
+      "value": "12–12,5% (annata 2022)",
+      "source": "s1"
+    },
+    {
+      "label": "Chi lo fa",
+      "value": "Cooperativa fondata nel 1960 da dieci viticoltori; produzione limitata al solo Comune di Carema, circa 13 ettari",
+      "source": "s2"
+    },
+    {
+      "label": "Vigneti",
+      "value": "Pergole sostenute da colonne di pietra, i «pilun»",
+      "source": "s2"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda del vino, annata 2022",
+      "publisher": "Cantina dei Produttori Nebbiolo di Carema",
+      "url": "https://www.caremadoc.it/prodotto/carema-doc-2022/",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Sito della cantina, pagina iniziale",
+      "publisher": "Cantina dei Produttori Nebbiolo di Carema",
+      "url": "https://www.caremadoc.it/",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.caremadoc.it/prodotto/carema-doc-2022/",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Cantina dei Produttori Nebbiolo di Carema",
+    "kind": "produttore",
+    "page": "https://www.caremadoc.it/prodotto/carema-doc-2022/",
+    "imageUrl": "https://www.caremadoc.it/wp-content/uploads/2023/09/carema-doc.png",
+    "status": "uso da confermare"
+  }
+}

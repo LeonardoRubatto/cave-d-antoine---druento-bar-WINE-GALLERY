@@ -1,0 +1,75 @@
+{
+  "id": "balbiano-freisa-surpreisa",
+  "order": 8,
+  "published": true,
+  "name": "Surpreisa",
+  "producer": {
+    "name": "Cantine Balbiano",
+    "place": "Andezeno (TO)",
+    "url": "https://www.balbiano.com/"
+  },
+  "denomination": "Freisa di Chieri DOC",
+  "type": "rosso",
+  "area": "torino-canavese",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Collina torinese · Andezeno"
+  },
+  "grapes": [
+    {
+      "name": "Freisa",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": 2025,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Affinamento",
+      "value": "Solo acciaio",
+      "source": "s1"
+    },
+    {
+      "label": "Alcol",
+      "value": "13% vol. (annata 2025)",
+      "source": "s1"
+    },
+    {
+      "label": "Servizio",
+      "value": "16 °C; il produttore consiglia di stapparlo preferibilmente entro il 2027",
+      "source": "s1"
+    },
+    {
+      "label": "Coltivazione",
+      "value": "Convenzionale, come dichiarato dal produttore",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Pagina del vino, annata 2025 (in inglese)",
+      "publisher": "Cantine Balbiano",
+      "url": "https://www.balbiano.com/en/cellars/our-wines/freisa-chieri-doc-surpreisa",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://www.balbiano.com/en/cellars/our-wines/freisa-chieri-doc-surpreisa",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Cantine Balbiano",
+    "kind": "produttore",
+    "page": "https://www.balbiano.com/en/cellars/our-wines/freisa-chieri-doc-surpreisa",
+    "imageUrl": "https://www.balbiano.com/sites/default/files/styles/product_share/public/2024-06/balbiano-surpreisa-freisa-chieri-doc-2022.png",
+    "status": "uso da confermare"
+  }
+}

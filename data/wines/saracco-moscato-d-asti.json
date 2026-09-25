@@ -1,0 +1,77 @@
+{
+  "id": "saracco-moscato-d-asti",
+  "order": 5,
+  "published": true,
+  "name": "Moscato d’Asti",
+  "producer": {
+    "name": "Paolo Saracco",
+    "place": "Castiglione Tinella (CN)",
+    "url": "https://paolosaracco.it/"
+  },
+  "denomination": "Moscato d’Asti DOCG",
+  "type": "dolce",
+  "area": "langhe-roero-asti",
+  "origin": {
+    "country": "Italia",
+    "region": "Piemonte",
+    "zone": "Langa astigiana e cuneese · Castiglione Tinella"
+  },
+  "grapes": [
+    {
+      "name": "Moscato Bianco Canelli",
+      "percent": 100
+    }
+  ],
+  "vintage": {
+    "reference": null,
+    "inCellar": null
+  },
+  "facts": [
+    {
+      "label": "Vigneti",
+      "value": "Castiglione Tinella, Santo Stefano Belbo, Castagnole Lanze, Calosso",
+      "source": "s1"
+    },
+    {
+      "label": "Vinificazione",
+      "value": "Pressatura soffice; il mosto resta in acciaio a −3 °C e fermenta in autoclave a temperatura controllata quando serve, poi microfiltrazione",
+      "source": "s1"
+    },
+    {
+      "label": "Stile",
+      "value": "Vino aromatico dolce, leggermente frizzante",
+      "source": "s1"
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "kind": "Scheda tecnica del produttore (PDF, in inglese)",
+      "publisher": "Paolo Saracco",
+      "url": "https://paolosaracco.it/images/sk/saracco-moscato-en.pdf",
+      "accessed": "2026-09-22"
+    },
+    {
+      "id": "s2",
+      "kind": "Pagina del vino",
+      "publisher": "Paolo Saracco",
+      "url": "https://paolosaracco.it/en/wines-saracco-piedmont/moscato-d-asti-docg-saracco",
+      "accessed": "2026-09-22"
+    }
+  ],
+  "labelReference": "https://paolosaracco.it/en/wines-saracco-piedmont/moscato-d-asti-docg-saracco",
+  "cellarNote": null,
+  "commerce": {
+    "sku": null,
+    "price": null,
+    "availability": "da-confermare",
+    "providerRef": null
+  },
+  "packshot": {
+    "publisher": "Paolo Saracco",
+    "kind": "produttore",
+    "page": "https://paolosaracco.it/en/wines-saracco-piedmont/moscato-d-asti-docg-saracco",
+    "imageUrl": "https://paolosaracco.it/images/moscatobt.jpg",
+    "status": "uso da confermare"
+  }
+}

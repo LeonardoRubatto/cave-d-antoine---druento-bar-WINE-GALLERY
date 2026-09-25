@@ -1,0 +1,89 @@
+{
+  "_nota": "Configurazione unica del sito. Dopo ogni modifica: node scripts/build.mjs",
+  "siteName": "Cantina dei vini · La Cave d’Antoine",
+  "baseUrl": "https://your-gallery-domain.example/",
+  "_baseUrl_todo": "Dominio segnaposto (IANA .example). Sostituire con il dominio reale e rilanciare la build: canonical, og:url, og:image, sitemap e robots si aggiornano insieme.",
+  "researchDate": "2026-09-22",
+  "researchDateLabel": "22 settembre 2026",
+  "placeholderNotice": "Selezione in aggiornamento, in attesa della lista definitiva del titolare",
+  "sibling": {
+    "_nota": "mode 'live' = link assoluti al sito generale pubblicato; 'local' = link relativi alla cartella fratella, per la prova da file://",
+    "mode": "live",
+    "liveBase": "https://caveantoine.pages.dev/",
+    "localFolder": "caveantoineDRUENTO",
+    "pages": {
+      "home": {
+        "live": "",
+        "file": "index.html"
+      },
+      "laCave": {
+        "live": "la-cave",
+        "file": "la-cave.html"
+      },
+      "contatti": {
+        "live": "contatti",
+        "file": "contatti.html"
+      },
+      "legal": {
+        "live": "note-legali",
+        "file": "note-legali.html"
+      }
+    }
+  },
+  "business": {
+    "name": "La Cave d’Antoine Vino & caffè",
+    "phone": "+39 335 537 2815",
+    "phoneHref": "tel:+393355372815",
+    "street": "Via Madonna, 12",
+    "postalCode": "10040",
+    "city": "Druento",
+    "province": "TO",
+    "hoursShort": "Mer–Sab · 17:30–00:00",
+    "latitude": 45.1289018,
+    "longitude": 7.5843495,
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=45.12890180,7.58434950",
+    "instagram": "https://www.instagram.com/lacave.dantoine/",
+    "google": "https://share.google/zh0mbzC94YwaQbhdW"
+  },
+  "commerce": {
+    "_nota": "Modalità supportate dalla build: 'info' (oggi: nessuna prenotazione, solo 'chiedi al bancone') e 'contact' (prenota contattando il locale, solo per i vini con availability 'disponibile'). 'shopify-buy-button', 'snipcart' e 'commerce-layer' sono punti di aggancio documentati nel README: la build si ferma con un errore finché non vengono collegati davvero.",
+    "mode": "info",
+    "currency": "EUR",
+    "contact": {
+      "phoneHref": "tel:+393355372815",
+      "email": null,
+      "whatsapp": null
+    }
+  },
+  "types": {
+    "rosso": {
+      "label": "Rosso",
+      "plural": "Rossi"
+    },
+    "bianco": {
+      "label": "Bianco",
+      "plural": "Bianchi"
+    },
+    "dolce": {
+      "label": "Dolce frizzante",
+      "plural": "Dolci"
+    }
+  },
+  "areas": {
+    "langhe-roero-asti": {
+      "label": "Langhe, Roero e Astigiano"
+    },
+    "torino-canavese": {
+      "label": "Torino e Canavese"
+    },
+    "francia": {
+      "label": "Francia"
+    }
+  },
+  "photos": {
+    "bottiglie": {
+      "alt": "Bottiglie impolverate coricate su scaffali di legno, in penombra",
+      "credit": "Emre Katmer · Unsplash"
+    }
+  }
+}
